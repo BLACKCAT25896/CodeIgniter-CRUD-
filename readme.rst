@@ -1,70 +1,43 @@
 ###################
-What is CodeIgniter
-###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+CRUD Application
+C :- Create
+R :- Read
+U :- Update
+D :- Delete
 
-*******************
-Release Information
-*******************
+We will follow the following steps to create a crud application in Codeigniter framework.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+1) Download and Extract the Codeigniter framework in the htdocs folder.
+2) Configure Codeigniter using config.php and database.php and autoload libraries like session, database, form_validation, etc.
+3) Create a users table in the database using phpMyAdmin.
+4) Create a controller called User in the controllers folder. 
+6) Create views called list, create, edit in views folder.
+7) Create a model called User Model in the models folder.
 
-**************************
-Changelog and New Features
-**************************
+Add User:-  
+8) To show Add User form, create a method called "create" in User controller.
+9) Load create view in "create" method.
+10) Write a "create" method in the User model to save a User in the database.
+11) Apply validation and save form values in database and show success messages.
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+List Users:-
+12) Create a method called "index" & Load "list" view in User controller to show all users using User_model.
+13) Write an "All" method in the User model for fetching all the user records.
+14) Write a loop to list all users in "list" view, also create an EDIT and DELETE button with links.
 
-*******************
-Server Requirements
-*******************
+Edit User:-
+15) Create an edit method in User controller to edit a User
+16) Write a "getUser" method in the User model to fetch a single user row.
+17) Load edit user view to edit a user with prepopulate user data.
+18) Write a "updateUser" method in the User model to update a user record. 
+19) Apply validation & update form values in database and show success notification.
 
-PHP version 5.6 or newer is recommended.
+Delete :-
+20) Create a delete method in the User controller.
+21) Write a "deleteUser" method in the User model to delete a user record from the database.
+22) Check if a record found in DB, if found then delete and redirect to list page with success message, else redirect with an error message.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Yeah! You have successfully completed a CRUD application in Codeigniter
 
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+------------------------
