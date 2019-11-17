@@ -1,6 +1,4 @@
-###################
-`
-CRUD Application
+`CRUD Application
 C :- Create
 R :- Read
 U :- Update
@@ -40,4 +38,5 @@ Delete :-
 
 Yeah! You have successfully completed a CRUD application in Codeigniter
 
-------------------------`
+------------------------
+`
